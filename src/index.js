@@ -9,6 +9,7 @@ import Example3 from "./components/Example3";
 
 ReactDOM.render(
   <React.StrictMode>
+      <App />
       <Example1 />
       <Example2 />
       <Example3 />

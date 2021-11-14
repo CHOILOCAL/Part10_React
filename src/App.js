@@ -7,12 +7,22 @@ import NotFound from "./pages/NotFound";
 import Links from "./components/Links";
 import NavLinks from "./components/NavLinks";
 import Login from "./pages/Login";
+import useWindowWidth from "./hooks/useWindowWidth"
+import withHasMounted from "./hocs/withHasMounted"
+import useHasMounted from "./hooks/useHasMounted";
 
 const isLogin = false;
 
-function App() {
+function App({ hasMounted }) {
+
+    const width = useWindowWidth();
+    // const hasMountedFromHooks = useHasMounted();
+
+    // console.log(hasMounted, hasMountedFromHooks);
+
     return (
         <BrowserRouter>
+            {width}
             <Links />
             <NavLinks />
             <Switch>
@@ -29,4 +39,4 @@ function App() {
     );
 }
 
-export default App;
+export default withHasMounted(App);
