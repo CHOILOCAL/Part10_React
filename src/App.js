@@ -8,8 +8,8 @@ import Links from "./components/Links";
 import NavLinks from "./components/NavLinks";
 import Login from "./pages/Login";
 import useWindowWidth from "./hooks/useWindowWidth"
-import withHasMounted from "./hocs/withHasMounted"
-import useHasMounted from "./hooks/useHasMounted";
+// import withHasMounted from "./hocs/withHasMounted"
+// import useHasMounted from "./hooks/useHasMounted";
 
 const isLogin = false;
 
@@ -39,4 +39,5 @@ function App({ hasMounted }) {
     );
 }
 
-export default withHasMounted(App);
+// export default withHasMounted(App);
+export default App;
