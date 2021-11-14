@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ControlleredComponet from "./components/ControlleredComponet";
+import UnControlleredComponet from "./components/UnControlleredComponet";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ControlleredComponet />
+      <UnControlleredComponet />
   </React.StrictMode>,
   document.getElementById('root')
 );
