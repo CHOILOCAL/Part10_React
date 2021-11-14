@@ -14,6 +14,7 @@ import A from "./components/A";
 import A2 from "./components/A2";
 import PersonContext from "./contexts/PersonContext";
 import Example8 from "./components/Example8";
+import ForwardRefIndex from "./components/ForwardRefIndex";
 
 const persons = [
     {id: 0, name: 'Mark', age: 30},
@@ -22,7 +23,7 @@ const persons = [
 ]
 ReactDOM.render(
   <React.StrictMode>
-      <PersonContext.Provider value={persons}>
+      {/*<PersonContext.Provider value={persons}>*/}
       {/*<App />*/}
       {/*<Example1 />*/}
       {/*<Example2 />*/}
@@ -32,9 +33,10 @@ ReactDOM.render(
       {/*<Example6 />*/}
       {/*<A />*/}
       {/*<A2 />*/}
-      <Example7 />
-      <Example8 />
-      </PersonContext.Provider>
+      {/*<Example7 />*/}
+      {/*<Example8 />*/}
+      {/*</PersonContext.Provider>*/}
+      <ForwardRefIndex />
   </React.StrictMode>,
   document.getElementById('root')
 );
