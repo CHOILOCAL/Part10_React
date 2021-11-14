@@ -9,16 +9,20 @@ import Example3 from "./components/Example3";
 import Example4 from "./components/Example4";
 import Example5 from "./components/Example5";
 import Example6 from "./components/Example6";
+import A from "./components/A";
+import A2 from "./components/A2";
 
 ReactDOM.render(
   <React.StrictMode>
-      <App />
-      <Example1 />
-      <Example2 />
-      <Example3 />
-      <Example4 />
-      <Example5 />
-      <Example6 />
+      {/*<App />*/}
+      {/*<Example1 />*/}
+      {/*<Example2 />*/}
+      {/*<Example3 />*/}
+      {/*<Example4 />*/}
+      {/*<Example5 />*/}
+      {/*<Example6 />*/}
+      {/*<A />*/}
+      <A2 />
   </React.StrictMode>,
   document.getElementById('root')
 );
