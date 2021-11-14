@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter, Route, Switch, Link, Redirect} from "react-router-dom";
+import Profile from "./pages/Profile";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Links from "./components/Links";
+import NavLinks from "./components/NavLinks";
+import Login from "./pages/Login";
+
+const isLogin = false;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Links />
+            <NavLinks />
+            <Switch>
+                <Route path="/login" render={() =>
+                    (isLogin ? <Redirect to="/" /> : <Login />)}
+                />
+                <Route path="/profile" component={Profile}></Route>
+                <Route path="/profile/:id" component={Profile}></Route>
+                <Route path="/about" component={About}></Route>
+                <Route path="/" exact component={Home}></Route>
+                <Route component={NotFound} />
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;
