@@ -1,12 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const LoginButton = (props) => {
 
     console.log(props);
 
+    const history = useHistory();
+    console.log('history = ' + history);
+
     function login() {
         setTimeout(() => {
-            props.history.push("/");
+            // props.history.push("/");
+            history.push("/");
         }, 1000)
     }
     return (
